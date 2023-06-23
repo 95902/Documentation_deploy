@@ -5,9 +5,6 @@ layout: home
 hero:
   name: "Procédure d'installation"
   text: "d'un rôle ansistrano"
-  image:
-    src: /images/téléchargement (22).jpg
-    alt: Innosys
   actions:
     - theme: brand
       text: Commencer
@@ -15,16 +12,6 @@ hero:
     - theme: alt
       text: GitHub
       link: https://github.com/INNOSYSFRANCE/assurmix_inte
-  # tagline: Objectif du Projet L'objectif principal de ce projet est de développer une solution qui facilite le déploiement des applications. Cette 
-
-
-  # actions:
-  #   - theme: brand
-  #     text: Markdown Examples
-  #     link: /markdown-examples
-  #   - theme: alt
-  #     text: API Examples
-  #     link: /api-examples
 
 features:
   - icon: 

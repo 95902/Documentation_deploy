@@ -1,3 +1,8 @@
+
+# Transfert de clés avec FileZilla
+
+## Instalation de FileZilla
+
 ::: details Installation de FileZilla
 
    1. Rendez-vous sur le site officiel de FileZilla ([https://filezilla-project.org/](https://filezilla-project.org/)) dans votre navigateur web.
@@ -27,27 +32,30 @@
    N'oubliez pas de prendre en compte la version spécifique de votre système d'exploitation et de suivre les instructions appropriées pour assurer une installation réussie de FileZilla.
 :::
 
-# Transfert de clés avec FileZilla
+## Transfert de la clé id_rsa de la machine virtuelle 1 vers .ssh (local)
 
-- **Transfert de la clé id_rsa de la machine virtuelle 1 vers .ssh (local) :**
-  - ::: details Ouvrez FileZilla et connectez-vous à la machine virtuelle 1 en utilisant le protocole SFTP avec votre mot de passe .
+- ::: details Ouvrez FileZilla et connectez-vous à la machine virtuelle 1 en utilisant le protocole SFTP avec votre mot de passe .
       ![An image](images\filezila.png)
       :::
 
-  - ::: details Accédez au répertoire `.ssh` sur la machine virtuelle 1 dans FileZilla.
+- ::: details Accédez au répertoire `.ssh` sur la machine virtuelle 1 dans FileZilla.
       ![An image](images\filezila.png)
       :::
   
-  - Téléchargez la clé sur votre machine locale, puis transférez-la dans le dossier `.ssh` (local).
-
+- Téléchargez la clé sur votre machine locale, puis transférez-la dans le dossier `.ssh` (local).
 
     ````
           Répertoire => C:\Users\Utilisateur\.ssh
     ````
 
-- **Transfert de l'authorized_keys de la machine virtuelle 1 vers la machine virtuelle 2 :**
-  - Accédez au répertoire `.ssh` sur la machine virtuelle 1 dans FileZilla.
-  - Transférez le fichier `authorized_keys` de la machine virtuelle 1 vers votre machine locale.
-  - Maintenant, connectez-vous à la machine virtuelle 2 en utilisant FileZilla.
-  - Accédez au répertoire `.ssh` sur la machine virtuelle 2 dans FileZilla.
-  - Transférez le fichier `authorized_keys` depuis votre machine locale vers le répertoire `.ssh` de la machine virtuelle 2.
+## Transfert de l'authorized_keys de la machine virtuelle 1 vers la machine virtuelle 2 :**
+
+- Accédez au répertoire `.ssh` sur la machine virtuelle 1 dans FileZilla.
+
+- Transférez le fichier `authorized_keys` de la machine virtuelle 1 vers votre machine locale.
+
+- Maintenant, connectez-vous à la machine virtuelle 2 en utilisant FileZilla.
+
+- Accédez au répertoire `.ssh` sur la machine virtuelle 2 dans FileZilla.
+  
+- Transférez le fichier `authorized_keys` depuis votre machine locale vers le répertoire `.ssh` de la machine virtuelle 2.

@@ -1,5 +1,6 @@
 
 # Gestion des variables chiffrées avec Ansible Vault
+##  Chiffrement  des variables
 
 Pour gérer vos variables chiffrées en toute sécurité avec Ansible Vault, suivez la procédure ci-dessous :
 
@@ -70,14 +71,14 @@ Pour gérer vos variables chiffrées en toute sécurité avec Ansible Vault, sui
             MYSQL_ROOT_PASSWORD: "{{ mysql_password }}"
     ```
 
-    Dans cet exemple, mysql_password,mysql_user,mysql_db  sont les variables chiffrées que vous avez définie dans le fichier vars/db_vars.yml.
+    Dans cet exemple,`{mysql_password}`,` {mysql_user} `,`{mysql_db}`  sont les variables chiffrées que vous avez définie dans le fichier vars/nom_fichier_variables_chiffrees.yml.
 
-6. Pour exécuter un playbook Ansible avec des variables chiffrées, utilisez la commande :
+<!-- 6. Pour exécuter un playbook Ansible avec des variables chiffrées, utilisez la commande :
 
     ```
     ansible-playbook playbook.yml --ask-vault-pass
     ```
 
-    Cela demandera le mot de passe du fichier chiffré avant d'exécuter le playbook.
+    Cela demandera le mot de passe du fichier chiffré avant d'exécuter le playbook. -->
 
 Ceci conclut la procédure pour utiliser Ansible Vault et gérer vos variables chiffrées de manière sécurisée.

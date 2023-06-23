@@ -1,5 +1,7 @@
 # Procédure pour créer un jeton d'accès personnel sur GitHub
 
+## Git-Token
+
 Voici les étapes à suivre pour créer un jeton d'accès personnel sur GitHub :
 
 1. Connectez-vous à votre compte GitHub sur [https://github.com](https://github.com).

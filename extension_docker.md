@@ -1,5 +1,7 @@
 # Procédure d'installation de l'extension Docker sur Visual Studio Code
 
+## Extension Docker
+
 Suivez les étapes ci-dessous pour installer l'extension Docker dans Visual Studio Code :
 
 1. Dans la barre latérale gauche de Visual Studio Code, cliquez sur l'icône des extensions (représentée par des carrés empilés) ou utilisez le raccourci clavier Ctrl+Shift+X (Windows/Linux) pour ouvrir la vue des extensions.

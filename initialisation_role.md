@@ -5,7 +5,9 @@
 
 # Initialisation d'un rôle Ansible
 
-Voici une procédure détaillée pour l'initialisation d'un rôle Ansible avec les différentes tâches, templates et fichiers requis :
+
+
+## Procédure détaillée pour l'initialisation d'un rôle Ansible
 
 1. Ouvrez un terminal ou une invite de commandes.
 
@@ -17,24 +19,41 @@ Voici une procédure détaillée pour l'initialisation d'un rôle Ansible avec l
     ansible-galaxy init mon_role
     ```
 
-3. Après l'exécution de la commande, un nouveau répertoire portant le nom du rôle sera créé dans le répertoire actuel. Ce répertoire contiendra la structure de base du rôle Ansible, y compris les répertoires suivants :
+3. Après l'exécution de la commande, un nouveau répertoire portant le nom du rôle sera créé dans le répertoire actuel.
 
-    ::: details Structure de dossier :
 
-    - **defaults/** : Ce répertoire contient les variables par défaut pour le rôle.
-    - **files/** : Ce répertoire est utilisé pour stocker les fichiers à copier sur les machines cibles.
-    - **handlers/** : Ce répertoire contient les gestionnaires (handlers) utilisés par les tâches.
-    - **meta/** : Ce répertoire est utilisé pour stocker les métadonnées du rôle.
-    - **tasks/** : Ce répertoire contient les tâches principales du rôle.
-    - **templates/** : Ce répertoire est utilisé pour stocker les templates à utiliser par le rôle.
-    - **tests/** : Ce répertoire est utilisé pour stocker les fichiers de tests pour le rôle.
-    - **vars/** : Ce répertoire contient les fichiers de variables spécifiques au rôle.
+    ::: details  Ce répertoire contiendra la structure de base du rôle Ansible, y compris les répertoires suivants :
+
+
+    - **defaults/** : Ce répertoire contient le fichier `main.yml` qui définit les variables par défaut pour le rôle.
+
+    - **files/** : Ce répertoire contient les fichiers statiques nécessaires au rôle. Par exemple, `config.ini` et un sous-répertoire `scripts/` contenant des scripts exécutables.
+
+    - **handlers/** : Ce répertoire contient le fichier `main.yml` qui définit les gestionnaires (handlers) utilisés dans le rôle.
+
+    - **meta/** : Ce répertoire contient le fichier `main.yml` qui fournit des métadonnées sur le rôle, telles que les dépendances avec d'autres rôles.
+
+    - **tasks/** : Ce répertoire contient le fichier `main.yml` qui contient les tâches à exécuter pour le rôle.
+
+    - **templates/** : Ce répertoire contient les modèles de fichiers utilisés dans le rôle. Par exemple, `template.conf.j2` est un fichier de modèle utilisant la syntaxe Jinja2.
+
+    - **tests/** : Ce répertoire contient les fichiers de test pour le rôle. Il peut inclure un répertoire `inventory/` contenant des fichiers d'inventaire de test, un fichier `requirements.yml` spécifiant les dépendances de test, et un fichier `test.yml` décrivant les scénarios de test.
+
+    - **vars/** : Ce répertoire contient les fichiers `main.yml` et `secrets.yml` qui définissent les variables utilisées dans le rôle. Le fichier `secrets.yml` peut contenir des variables sensibles qui doivent être protégées.
+
+    - **README.md** : Ce fichier contient la documentation du rôle, décrivant son objectif, son utilisation et d'autres informations pertinentes.
+
+    Veuillez noter que cette structure de dossier est une suggestion courante pour un rôle Ansible, mais elle peut être adaptée en fonction des besoins spécifiques du projet.
 
     :::
 
 4. Pour la création des fichiers et tâches spécifiques, suivez les étapes ci-dessous :
 
-    a. Tâche "after symlink" (après la création des liens symboliques) : Créez un fichier YAML dans le répertoire `tasks` avec le nom `after_symlink.yml`. Cette tâche peut contenir les actions à effectuer après la création des liens symboliques.
+    a. Tâche "after symlink" (après la création des liens symboliques) : 
+    
+    - Créez un fichier YAML dans le répertoire `tasks` avec le nom `after_symlink.yml`. 
+    
+    Cette tâche peut contenir les actions à effectuer après la création des liens symboliques.
 
    ```  yaml
         ---
@@ -42,7 +61,10 @@ Voici une procédure détaillée pour l'initialisation d'un rôle Ansible avec l
         # Ajoutez ici les actions spécifiques
     ```
 
-    b. Tâche "before symlink" (avant la création des liens symboliques) : Créez un fichier YAML dans le répertoire `tasks` avec le nom `before_symlink.yml`. Cette tâche peut contenir les actions à effectuer avant la création des liens symboliques.
+    b. Tâche "before symlink" (avant la création des liens symboliques) : 
+    - Créez un fichier YAML dans le répertoire `tasks` avec le nom `before_symlink.yml`. 
+    
+    Cette tâche peut contenir les actions à effectuer avant la création des liens symboliques.
 
     ```  yaml
         ---
@@ -50,7 +72,10 @@ Voici une procédure détaillée pour l'initialisation d'un rôle Ansible avec l
         # Ajoutez ici les actions spécifiques
     ```
 
-    c. Tâche "main" (tâches principales) : Créez un fichier YAML dans le répertoire `tasks` avec le nom `main.yml`. Cette tâche contient les actions principales du rôle.
+    c. Tâche "main" (tâches principales) : 
+    - Créez un fichier YAML dans le répertoire `tasks` avec le nom `main.yml`. 
+    
+    Cette tâche contient les actions principales du rôle.
 
     
     ```  yaml
@@ -66,13 +91,19 @@ Voici une procédure détaillée pour l'initialisation d'un rôle Ansible avec l
             # name: ansistrano.rollback
     ```
 
-    d. Templates : Créez les templates requis dans le répertoire `templates`. Pour les fichiers `docker-compose.yml`, `Dockerfile` et `Vhost`, créez les fichiers suivants :
+    d. Templates : 
+    - Créez les templates requis dans le répertoire `templates`. 
+    
+    Pour les fichiers `docker-compose.yml`, `Dockerfile` et `Vhost`, créez les fichiers suivants :
 
-        - `docker-compose.yml.j2`
-        - `Dockerfile.j2`
-        - `Vhost.j2`
+        - docker-compose.yml.j2
+        - Dockerfile.j2
+        - Vhost.j2
 
-    e. Fichier "db_vars" : Créez un fichier YAML dans le répertoire `vars` avec le nom `db_vars.yml`. Ce fichier peut contenir les variables spécifiques à la base de données.
+    e. Fichier "db_vars" : 
+    - Créez un fichier YAML dans le répertoire `vars` avec le nom `db_vars.yml`. 
+    
+    Ce fichier peut contenir les variables spécifiques à la base de données.
 
 
     ```  yaml
@@ -83,7 +114,8 @@ Voici une procédure détaillée pour l'initialisation d'un rôle Ansible avec l
         db_name: mydatabase
     ```
 
-    f. Fichier "main" : Le fichier `main.yml` dans le répertoire `vars` contient les variable nécéssaire aux  déploiement du projet .
+    f. Fichier "main" : 
+    - Le fichier `main.yml` dans le répertoire `vars` contient les variable nécéssaire aux  déploiement du projet .
 
 
     ```  yaml

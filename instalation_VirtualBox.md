@@ -37,7 +37,7 @@
      ```
 
 ## 5. **Configuration du Vagrantfile :**
-   - Ouvrez le fichier Vagrantfile généré à l'étape précédente dans un éditeur de texte.
+   - Ouvrez le fichier Vagrantfile généré à l'étape précédente dans un éditeur de texte ou directement dans votr Ide.
    - Dans ce fichier, vous trouverez des commentaires expliquant les options de configuration.
    - Modifiez le contenu du fichier avec le fichier fourni.
       ::: details fichier
