@@ -2,13 +2,15 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Documentation deploiement",
-  description: "Deploiement Ansistrano",
+  title: "Documentation déploiement",
+  description: "Déploiement Ansistrano",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Documentation', link: '/instalation' }
+      { text: 'Instalation', link: '/presentation' },
+      { text: 'Documentation', link: '/markdown-examples' }
+   
     ],
 
     sidebar: [
@@ -55,5 +57,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/INNOSYSFRANCE/assurmix_inte' }
     ]
+    
   }
+
+  
 })

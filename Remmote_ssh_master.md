@@ -8,7 +8,7 @@
 
 4. Localisez l'extension "Remote - SSH" dans la liste et cliquez sur le bouton "Installer" à côté de celle-ci.
    
-   ![An image](images\remotessh1.PNG)
+   ![An image](images\remotessh1.jpg)
 
 5. Une fois l'installation terminée, vous pouvez cliquer sur le bouton "Redémarrer" pour activer l'extension ou choisir de redémarrer ultérieurement.
 

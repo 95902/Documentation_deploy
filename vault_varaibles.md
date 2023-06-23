@@ -34,7 +34,6 @@ Pour gérer vos variables chiffrées en toute sécurité avec Ansible Vault, sui
 
     Cela ouvrira l'éditeur de texte avec le contenu chiffré du fichier, vous permettant de modifier les variables existantes.
 
-
     ::: details Commandes  suplémentaire
 
     - Pour chiffrer un fichier de variables non chiffrées existant, utilisez la commande :
@@ -43,9 +42,9 @@ Pour gérer vos variables chiffrées en toute sécurité avec Ansible Vault, sui
             ansible-vault encrypt nom_fichier_variables_non_chiffrees.yml
         ```
 
-        Cela chiffrera le fichier spécifié et créera un nouveau fichier chiffré avec l'extension `.vault`. 
+        Cela chiffrera le fichier spécifié et créera un nouveau fichier chiffré avec l'extension `.vault`.
         Le fichier d'origine sera préservé et vous pouvez le supprimer en toute sécurité une fois que vous êtes sûr que le fichier chiffré fonctionne correctement.
-   
+
     - Pour décrypter un fichier chiffré et le rendre accessible en clair, utilisez la commande :
 
         ```
@@ -56,8 +55,8 @@ Pour gérer vos variables chiffrées en toute sécurité avec Ansible Vault, sui
 
     :::
 
-5.  Dans les tâches ou les modèles de votre rôle, vous pouvez référencer les variables chiffrées en utilisant la syntaxe {{ vault_variable_name }}.
-    
+5. Dans les tâches ou les modèles de votre rôle, vous pouvez référencer les variables chiffrées en utilisant la syntaxe {{ vault_variable_name }}.
+
     Par exemple, si vous avez une tâche pour configurer un fichier de configuration avec le mot de passe de la base de données dans un docker-compose :
 
     ```
@@ -71,7 +70,7 @@ Pour gérer vos variables chiffrées en toute sécurité avec Ansible Vault, sui
             MYSQL_ROOT_PASSWORD: "{{ mysql_password }}"
     ```
 
-    Dans cet exemple, mysql_password,mysql_user,mysql_db  sont les variables chiffrées que vous avez définie dans le fichier vars/db_vars.yml. 
+    Dans cet exemple, mysql_password,mysql_user,mysql_db  sont les variables chiffrées que vous avez définie dans le fichier vars/db_vars.yml.
 
 6. Pour exécuter un playbook Ansible avec des variables chiffrées, utilisez la commande :
 
